@@ -70,7 +70,10 @@ The form does **not** send messages from the site. It opens the visitor's own em
 
 https://michael-osei-yeboah.vercel.app (Vercel project `michael-osei-yeboah`, account tread21).
 
-To publish changes, copy only the site files (`index.html`, `css/`, `js/`, `assets/`) to a folder and run `npx vercel deploy --prod` there, or connect the project to a GitHub repo in the Vercel dashboard so every push deploys.
+Code: https://github.com/TREAD21/portfolio. The repo is connected to Vercel, so **every push to `main` updates the live site** within a minute. `.vercelignore` keeps `README.md`, `cv-source/` and `.claude/` off the website.
+
+- Link previews (WhatsApp, LinkedIn, X) use `assets/images/og-image.jpg` (1200×630).
+- Visitor stats: Vercel dashboard → project `michael-osei-yeboah` → Analytics.
 
 ## Other ways to publish
 
