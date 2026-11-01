@@ -1,0 +1,6 @@
+# Files in the GitHub repo that should not be published on the website
+README.md
+cv-source/
+.claude/
+.gitignore
+.vercelignore
