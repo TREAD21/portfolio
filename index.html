@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ================= SEO ================= -->
+  <title>Michael Osei Yeboah — Finance, Data, Design &amp; Web Portfolio</title>
+  <meta name="description" content="Portfolio of Michael Osei Yeboah: finance and accounting, financial reporting and dashboards, graphic design, website development and business data analysis.">
+  <meta name="author" content="Michael Osei Yeboah">
+  <meta name="keywords" content="Michael Osei Yeboah, portfolio, finance, accounting, financial reporting, dashboards, graphic design, web development, app development, data analysis">
+  <meta name="theme-color" content="#101010">
+  <!-- After publishing, replace the URL below with your live address -->
+  <link rel="canonical" href="https://michael-osei-yeboah.vercel.app/">
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Michael Osei Yeboah — Portfolio">
+  <meta property="og:description" content="Finance, financial reporting, dashboards, graphic design and web development.">
+  <meta property="og:url" content="https://michael-osei-yeboah.vercel.app/">
+  <!-- Optional: add a 1200×630 PNG and use its full URL, e.g. https://michael-osei-yeboah.vercel.app/assets/images/og-image.png -->
+  <!-- <meta property="og:image" content="https://michael-osei-yeboah.vercel.app/assets/images/og-image.png"> -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Marks that JavaScript is available before first paint (prevents a flash of un-animated content) -->
+  <script>document.documentElement.classList.add("js");</script>
+
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Michael Osei Yeboah",
+    "url": "https://michael-osei-yeboah.vercel.app/",
+    "email": "mailto:michaelyeboah735@gmail.com",
+    "jobTitle": "Accountant / Administrator",
+    "worksFor": { "@type": "Organization", "name": "Deseret School of Design" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Ghana, Legon" },
+    "sameAs": ["https://github.com/TREAD21", "https://www.facebook.com/michael.yeboah.378199"],
+    "knowsAbout": ["Finance", "Accounting", "Financial reporting", "Dashboard development", "Graphic design", "Web development", "App development", "Data analysis"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ================= 1. NAVIGATION ================= -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <div class="nav__bar">
+        <a href="#top" class="brand" aria-label="Michael Osei Yeboah — back to top">
+          <span class="brand__mark" aria-hidden="true">MY</span>
+          <span class="brand__name">Michael Yeboah</span>
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__links">
+            <li><a href="#about" class="nav__link">About</a></li>
+            <li><a href="#skills" class="nav__link">Skills</a></li>
+            <li><a href="#projects" class="nav__link">Work</a></li>
+            <li><a href="#experience" class="nav__link">Experience</a></li>
+            <li><a href="#cv" class="nav__link">CV</a></li>
+          </ul>
+          <a href="#contact" class="btn btn--glass btn--sm nav__cta">Get in touch</a>
+        </div>
+
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= 2. HERO ================= -->
+    <!--
+      Hero photo: assets/images/hero.jpg (stock photo by Nikita Kachanovsky on
+      Unsplash, free under the Unsplash License). To use your own, replace that
+      file. To go back to the plain gradient, remove the "hero--photo" class.
+    -->
+    <section class="hero hero--photo" aria-labelledby="hero-title">
+      <div class="hero__media" aria-hidden="true">
+        <span class="hero__monogram">MOY</span>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title reveal" id="hero-title">
+            Clear numbers.<br>
+            <span class="accent">Considered design.</span>
+          </h1>
+          <div class="hero__row reveal">
+            <a href="#projects" class="btn btn--pill">
+              View my work
+              <span class="btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+            <p class="hero__intro">
+              I’m Michael Osei Yeboah — I organise financial information, build reporting
+              dashboards, and design and code the interfaces that make data easier to understand.
+            </p>
+          </div>
+        </div>
+
+        <!-- Focus areas (in place of statistics — no figures are claimed) -->
+        <ul class="hero__strip reveal" aria-label="Areas of focus">
+          <li>
+            <span class="strip__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+            <span><strong>Finance</strong><small>&amp; Accounting</small></span>
+          </li>
+          <li>
+            <span class="strip__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></svg></span>
+            <span><strong>Reporting</strong><small>&amp; Dashboards</small></span>
+          </li>
+          <li>
+            <span class="strip__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="8.5" cy="9.5" r="1.3"/><circle cx="14.5" cy="8" r="1.3"/><circle cx="16.5" cy="13" r="1.3"/></svg></span>
+            <span><strong>Graphic</strong><small>Design</small></span>
+          </li>
+          <li>
+            <span class="strip__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span>
+            <span><strong>Web</strong><small>Development</small></span>
+          </li>
+          <li>
+            <span class="strip__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></span>
+            <span><strong>App</strong><small>Development</small></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Tools strip (edit to match the tools you actually use) -->
+    <section class="tools" aria-labelledby="tools-title">
+      <div class="container">
+        <h2 class="tools__title reveal" id="tools-title">Tools I <span class="accent">work with</span></h2>
+        <ul class="tools__list reveal">
+          <li>Microsoft Excel</li>
+          <li>Google Sheets</li>
+          <li>Microsoft Word</li>
+          <li>PowerPoint</li>
+          <li>Adobe Photoshop</li>
+          <li>AI Application</li>
+          <li>Canva</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Git &amp; GitHub</li>
+          <li>VS Code</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= 3. ABOUT ================= -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about">
+        <div class="about__text">
+          <p class="eyebrow reveal">About me</p>
+          <h2 class="section__title reveal" id="about-title">
+            Meet Michael — <span class="accent">finance, data</span> and design in one place
+          </h2>
+          <p class="reveal">
+            I’m interested in how organisations record, report and communicate their financial
+            and operational information — and how good design makes that information easier to act on.
+            My work spans finance and accounting, financial reporting and dashboard development,
+            graphic design, and building websites with HTML, CSS and JavaScript.
+          </p>
+          <p class="reveal">
+            I enjoy taking messy spreadsheets or loosely defined ideas and turning them into
+            something structured, accurate and visually clear. I’m continuing to build experience
+            across these areas and I’m open to opportunities and collaborations.
+          </p>
+          <a href="#contact" class="btn btn--pill btn--dark reveal">
+            Get in touch
+            <span class="btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+
+        <div class="about__visual reveal">
+          <p class="about__note"><span aria-hidden="true"></span>Analytical by training, visual by instinct.</p>
+          <img class="about__photo" src="assets/images/profile.jpg" alt="Portrait of Michael Osei Yeboah in a charcoal suit, seated at a desk" width="480" height="560">
+          <div class="float-card">
+            <img src="assets/images/focus-dashboard.jpg" alt="" width="1200" height="750">
+            <p class="float-card__tag"><span aria-hidden="true"></span>Current focus</p>
+            <h3>Reporting dashboards</h3>
+            <p>Turning financial data into <strong>clear, readable</strong> views for decision-making.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. SKILLS ================= -->
+    <!-- Edit the chips so they list only tools and skills you actually use. -->
+    <section class="section section--grey" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="eyebrow reveal">Skills</p>
+            <h2 class="section__title reveal" id="skills-title">What I <span class="accent">work on</span>,<br>grouped by discipline</h2>
+          </div>
+          <p class="section__sub reveal">These areas often overlap — a good dashboard is part <strong>finance</strong>, part <strong>data</strong> and part <strong>design</strong>.</p>
+        </div>
+      </div>
+
+      <div class="skills-track" tabindex="0" aria-label="Skill categories (scrolls horizontally on small screens)">
+        <div class="container skills">
+          <article class="skill-card skill-card--featured reveal">
+            <div class="skill-card__top">
+              <span class="pill-num">01</span>
+              <span class="circle-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
+            </div>
+            <h3>Finance &amp; Accounting</h3>
+            <p>Recording, reconciling and presenting financial information accurately.</p>
+            <ul class="chips">
+              <li>Bookkeeping principles</li>
+              <li>Reconciliation</li>
+              <li>Financial statements</li>
+              <li>Budgeting</li>
+              <li>Variance analysis</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card__top">
+              <span class="pill-num">02</span>
+              <span class="circle-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
+            </div>
+            <h3>Reporting &amp; Dashboards</h3>
+            <p>Building views that make performance and trends easy to read.</p>
+            <ul class="chips">
+              <li>Microsoft Excel</li>
+              <li>Pivot tables</li>
+              <li>KPI design</li>
+              <li>Data visualisation</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card__top">
+              <span class="pill-num">03</span>
+              <span class="circle-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
+            </div>
+            <h3>Graphic Design</h3>
+            <p>Visual communication with clean layout and strong hierarchy.</p>
+            <ul class="chips">
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+              <li>Canva</li>
+              <li>Typography</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card__top">
+              <span class="pill-num">04</span>
+              <span class="circle-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
+            </div>
+            <h3>Web Development</h3>
+            <p>Responsive, accessible websites written by hand.</p>
+            <ul class="chips">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>Git</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card__top">
+              <span class="pill-num">05</span>
+              <span class="circle-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
+            </div>
+            <h3>App Development</h3>
+            <p>Full-stack apps with their own database and API, installable on phones as PWAs.</p>
+            <ul class="chips">
+              <li>React / Next.js</li>
+              <li>TypeScript</li>
+              <li>Node.js</li>
+              <li>SQL</li>
+              <li>PWA</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card__top">
+              <span class="pill-num">06</span>
+              <span class="circle-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
+            </div>
+            <h3>Operations &amp; Data</h3>
+            <p>Keeping records organised and turning raw data into insight.</p>
+            <ul class="chips">
+              <li>Data cleaning</li>
+              <li>Data analysis</li>
+              <li>Documentation</li>
+              <li>MS Office</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW I WORK (process) ================= -->
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section__head section__head--split">
+          <h2 class="section__title reveal" id="process-title"><span class="accent">How I work</span>,<br>step by step</h2>
+          <a href="#projects" class="btn btn--pill btn--burgundy btn--sm reveal">
+            See the work
+            <span class="btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+
+        <div class="process">
+          <ol class="process__list" id="process-list">
+            <li class="process__item is-open reveal" data-image="assets/images/project-st-peters.jpg">
+              <button class="process__btn" type="button" aria-expanded="true" aria-controls="step-1">
+                <span>Understand the information and the goal</span>
+                <span class="circle-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
+              </button>
+              <div class="process__panel" id="step-1">
+                <p>I start by learning what the numbers or content represent, who will use the result, and what decision it needs to support.</p>
+              </div>
+            </li>
+            <li class="process__item reveal" data-image="assets/images/project-finance-dashboard.jpg">
+              <button class="process__btn" type="button" aria-expanded="false" aria-controls="step-2">
+                <span>Organise and check the data</span>
+                <span class="circle-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
+              </button>
+              <div class="process__panel" id="step-2" hidden>
+                <p>Cleaning, structuring and reconciling the information so everything built on top of it is accurate.</p>
+              </div>
+            </li>
+            <li class="process__item reveal" data-image="assets/images/project-graphic-design.svg">
+              <button class="process__btn" type="button" aria-expanded="false" aria-controls="step-3">
+                <span>Design and build</span>
+                <span class="circle-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
+              </button>
+              <div class="process__panel" id="step-3" hidden>
+                <p>Creating the report, dashboard, graphic or web page with a clear layout and consistent visual language.</p>
+              </div>
+            </li>
+            <li class="process__item reveal" data-image="assets/images/project-portfolio.jpg">
+              <button class="process__btn" type="button" aria-expanded="false" aria-controls="step-4">
+                <span>Review, refine and document</span>
+                <span class="circle-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span>
+              </button>
+              <div class="process__panel" id="step-4" hidden>
+                <p>Testing the result, improving it from feedback and documenting it so others can follow and maintain it.</p>
+              </div>
+            </li>
+          </ol>
+          <div class="process__media reveal">
+            <img id="process-image" src="assets/images/project-st-peters.jpg" alt="Example of my work for the selected step of my process" width="800" height="520" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5. FEATURED PROJECTS ================= -->
+    <!--
+      HOW TO UPDATE A PROJECT
+      1. Replace the image in assets/images/ (keep the same file name, or change src).
+      2. Edit the title, description and the technology chips.
+      3. Set the link: change href="#" to your project URL and DELETE the
+         data-status="coming-soon" attribute. Links with that attribute show a
+         "coming soon" notice instead of navigating.
+      4. When the description is final, delete the <span class="badge">Sample description</span>.
+    -->
+    <section class="section section--grey" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="eyebrow eyebrow--center reveal">Featured work</p>
+          <h2 class="section__title reveal" id="projects-title">Selected <span class="accent">projects</span></h2>
+          <p class="section__sub reveal">Things I’ve built for myself and for the people I work with, from fintech to school systems.</p>
+        </div>
+
+        <div class="projects">
+          <!-- PROJECT: SIKA (featured, full width) -->
+          <article class="project project--feature reveal">
+            <!-- Plays while on screen; stays on the poster for visitors who prefer reduced motion. -->
+            <div class="project__media project__media--video">
+              <video class="project__video" src="assets/video/sika-launch.mp4" poster="assets/images/project-sika.jpg" muted loop playsinline preload="none" aria-label="Sika launch video: the Sika wordmark, the line “Money that moves the way you live”, and MTN MoMo, Telecel Cash and AT Money badges"></video>
+              <button class="video-toggle" type="button" aria-label="Play video" hidden>
+                <svg class="video-toggle__pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+                <svg class="video-toggle__play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>
+              </button>
+            </div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span class="project__cat">Fintech · Web app</span>
+                <span class="badge badge--status">In development</span>
+              </div>
+              <h3 class="project__title">Sika — Fintech App</h3>
+              <p class="project__desc">A fintech app for Ghana: wallets, person-to-person transfers, mobile money (MTN, Telecel, AT) and bill payments. Built on a double-entry ledger that keeps every amount in exact pesewas, so balances can always be checked against their postings.</p>
+              <ul class="chips chips--sm" aria-label="Technologies used">
+                <li>Next.js</li><li>TypeScript</li><li>Tailwind CSS</li><li>Express</li><li>PostgreSQL</li><li>Paystack</li>
+              </ul>
+              <a class="project__link" href="https://github.com/TREAD21/SIKA-APP" target="_blank" rel="noopener">View on GitHub <span class="circle-arrow circle-arrow--sm" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            </div>
+          </article>
+
+          <!-- PROJECT 1 -->
+          <article class="project reveal">
+            <a class="project__media" href="#" data-status="coming-soon" tabindex="-1" aria-hidden="true">
+              <img src="assets/images/project-finance-dashboard.jpg" alt="Screenshot of the SME Finance dashboard showing total income, total expenses and net profit, with cash, mobile money, bank and card balances" width="800" height="520" loading="lazy">
+            </a>
+            <div class="project__body">
+              <div class="project__meta">
+                <span class="project__cat">Finance · Web app</span>
+              </div>
+              <h3 class="project__title">Financial Reporting Dashboard</h3>
+              <p class="project__desc">SME Finance (Ghana Business Edition) — a web app for small businesses to record sales and expenses, see net profit, track cash, mobile money, bank and card balances, manage debts and export reports to PDF or Excel.</p>
+              <ul class="chips chips--sm" aria-label="Technologies used">
+                <li>Next.js</li><li>TypeScript</li><li>Tailwind CSS</li><li>Express</li><li>SQLite</li>
+              </ul>
+              <a class="project__link" href="#" data-status="coming-soon">View project <span class="circle-arrow circle-arrow--sm" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            </div>
+          </article>
+
+          <!-- PROJECT 2 -->
+          <!-- Add the live address when the site is published: set href and delete data-status="coming-soon". -->
+          <article class="project reveal">
+            <a class="project__media" href="#" data-status="coming-soon" tabindex="-1" aria-hidden="true">
+              <img src="assets/images/project-st-peters.jpg" alt="Home page of the St. Peter’s Mission Schools website, with the headline “Welcome to the Noble Family” over a graduation photo" width="1440" height="900" loading="lazy">
+            </a>
+            <div class="project__body">
+              <div class="project__meta">
+                <span class="project__cat">School system · Website &amp; portal</span>
+                <span class="badge badge--status">In progress</span>
+              </div>
+              <h3 class="project__title">St. Peter’s Mission Schools</h3>
+              <p class="project__desc">A public website and a role-based staff portal for a Creche-to-SHS school. Admins, the headmaster, teachers and accountants each get their own view of students, attendance, grades, fees and fee bills, payroll, expenses, and profit &amp; loss and balance sheet reports.</p>
+              <ul class="chips chips--sm" aria-label="Technologies used">
+                <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Node.js</li><li>SQLite</li><li>PWA</li>
+              </ul>
+              <a class="project__link" href="#" data-status="coming-soon">Live site coming soon <span class="circle-arrow circle-arrow--sm" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            </div>
+          </article>
+
+          <!-- PROJECT 3 -->
+          <article class="project reveal">
+            <a class="project__media" href="#top" tabindex="-1" aria-hidden="true">
+              <img src="assets/images/project-portfolio.jpg" alt="Screenshot of the hero section of this portfolio website, with a floating navigation bar and a gold-accented headline" width="800" height="520" loading="lazy">
+            </a>
+            <div class="project__body">
+              <div class="project__meta">
+                <span class="project__cat">Web · Design</span>
+              </div>
+              <h3 class="project__title">Personal Portfolio Website</h3>
+              <p class="project__desc">The site you’re viewing: designed and hand-coded with semantic HTML, modern CSS and vanilla JavaScript. Responsive, keyboard accessible and respectful of reduced-motion settings.</p>
+              <ul class="chips chips--sm" aria-label="Technologies used">
+                <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Responsive</li>
+              </ul>
+              <a class="project__link" href="#top">View project <span class="circle-arrow circle-arrow--sm" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            </div>
+          </article>
+
+          <!-- PROJECT 4 -->
+          <article class="project reveal">
+            <a class="project__media" href="#" data-status="coming-soon" tabindex="-1" aria-hidden="true">
+              <img src="assets/images/project-graphic-design.svg" alt="Placeholder collage of graphic design work: a poster layout, a logo mark and a colour palette" width="800" height="520" loading="lazy">
+            </a>
+            <div class="project__body">
+              <div class="project__meta">
+                <span class="project__cat">Graphic design</span>
+                <span class="badge">Sample description</span>
+              </div>
+              <h3 class="project__title">Graphic Design Projects</h3>
+              <p class="project__desc">A collection of visual communication work such as posters, social media graphics and brand elements, focused on clean layout, strong hierarchy and consistent colour.</p>
+              <ul class="chips chips--sm" aria-label="Technologies used">
+                <li>Photoshop</li><li>Illustrator</li><li>Canva</li><li>Typography</li>
+              </ul>
+              <!-- Set href to your Behance profile URL and delete data-status="coming-soon". -->
+              <a class="project__link" href="#" data-status="coming-soon">View on Behance <span class="circle-arrow circle-arrow--sm" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. EXPERIENCE & EDUCATION ================= -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow reveal">Background</p>
+          <h2 class="section__title reveal" id="experience-title">Experience <span class="accent">&amp; education</span></h2>
+        </div>
+
+        <div class="timeline-grid">
+          <div class="timeline-col">
+            <h3 class="timeline-col__title reveal">Experience</h3>
+            <ol class="timeline">
+              <li class="timeline__item reveal">
+                <span class="pill-num">Current role</span>
+                <h4>Accountant / Administrator</h4>
+                <p class="timeline__org">Deseret School of Design · North Legon, Accra</p>
+                <p>Responsible for the school’s accounts and its day-to-day administration.</p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="timeline-col">
+            <h3 class="timeline-col__title reveal">Education &amp; learning</h3>
+            <ol class="timeline">
+              <li class="timeline__item reveal">
+                <span class="pill-num">Degree</span>
+                <h4>BSc Accounting</h4>
+                <p class="timeline__org">University of Ghana, Legon</p>
+                <p>Bachelor of Science in Accounting.</p>
+              </li>
+              <li class="timeline__item reveal">
+                <span class="pill-num">Ongoing</span>
+                <h4>Web development &amp; data tools</h4>
+                <p class="timeline__org">Self-directed learning through project work</p>
+                <p>Building full-stack web apps, including Sika and the St. Peter’s staff portal, with JavaScript, TypeScript, Next.js, Node.js and SQL databases.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. CV DOWNLOAD ================= -->
+    <!-- Replace assets/cv/Michael-Osei-Yeboah-CV.pdf with your real CV (same file name). -->
+    <section class="cv" id="cv" aria-labelledby="cv-title">
+      <div class="container">
+        <div class="cv__card reveal">
+          <p class="eyebrow eyebrow--center eyebrow--light">Curriculum vitae</p>
+          <h2 class="cv__title" id="cv-title">Prefer the <span class="accent">full picture?</span></h2>
+          <p>Download my CV for a complete summary of my education, experience and skills.</p>
+          <div class="cv__actions">
+            <a href="assets/cv/Michael-Osei-Yeboah-CV.pdf" class="btn btn--pill btn--gold" download>
+              Download CV (PDF)
+              <span class="btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
+            </a>
+            <a href="assets/cv/Michael-Osei-Yeboah-CV.pdf" class="btn btn--glass" target="_blank" rel="noopener">View in browser</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 8. CONTACT ================= -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact">
+        <div class="contact__info">
+          <p class="eyebrow reveal">Contact</p>
+          <h2 class="section__title reveal" id="contact-title">Let’s <span class="accent">talk</span>.</h2>
+          <p class="section__sub reveal">Whether it’s an opportunity, a project or a question about my work, email is the best way to reach me.</p>
+
+          <div class="email-card reveal">
+            <span class="email-card__label">Email</span>
+            <a class="email-card__address" href="mailto:michaelyeboah735@gmail.com">michaelyeboah735@gmail.com</a>
+            <button class="btn btn--outline btn--sm" type="button" data-copy="michaelyeboah735@gmail.com">Copy email</button>
+          </div>
+
+          <!-- Replace href="#" with your profile URLs and delete data-status="coming-soon".
+               WhatsApp: use https://wa.me/233XXXXXXXXX (your number in international format, no + or spaces). -->
+          <ul class="socials reveal" aria-label="Profiles and social media">
+            <li>
+              <a href="#" data-status="coming-soon" class="social" aria-label="LinkedIn profile">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.64-1.6-2.64-1.62 0-1.86 1.26-1.86 2.56v4.91h-4z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/TREAD21" target="_blank" rel="noopener" class="social" aria-label="GitHub profile">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+                <span>GitHub</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-status="coming-soon" class="social" aria-label="Behance design portfolio">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 11.4c.9-.4 1.5-1.2 1.5-2.4C9.7 6.8 8.1 6 6 6H1v12h5.2c2.3 0 4.3-1.1 4.3-3.6 0-1.5-.8-2.6-2.3-3zM3.3 8h2.3c.9 0 1.7.3 1.7 1.3s-.6 1.4-1.6 1.4H3.3zm2.6 8H3.3v-3.3h2.7c1.1 0 1.8.5 1.8 1.7 0 1.2-.9 1.6-1.9 1.6zM22.9 13.7c0-2.8-1.6-5-4.6-5-2.9 0-4.8 2.1-4.8 4.9 0 2.9 1.8 4.9 4.8 4.9 2.2 0 3.7-1 4.4-3.2h-2.3c-.3.8-1.2 1.2-2 1.2-1.6 0-2.4-.9-2.4-2.5h6.9v-.3zm-6.9-1c.1-1.3.9-2.1 2.2-2.1 1.3 0 2 .9 2.1 2.1zM15.3 6.6h5.4V8h-5.4z"/></svg>
+                <span>Behance</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/michael.yeboah.378199" target="_blank" rel="noopener" class="social" aria-label="Facebook profile">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.25-1.5 1.5-1.5H16.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21z"/></svg>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-status="coming-soon" class="social" aria-label="Instagram profile">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm4.9-8.95a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zM12 3.6c2.73 0 3.05 0 4.13.06 2.77.13 4.07 1.44 4.2 4.2.05 1.08.06 1.4.06 4.14s0 3.05-.06 4.13c-.13 2.76-1.43 4.07-4.2 4.2-1.08.05-1.4.06-4.13.06s-3.06 0-4.14-.06c-2.77-.13-4.07-1.44-4.2-4.2C3.61 15.05 3.6 14.73 3.6 12s0-3.06.06-4.14c.13-2.76 1.43-4.07 4.2-4.2C8.94 3.61 9.26 3.6 12 3.6zM12 2c-2.72 0-3.06 0-4.12.06C4.24 2.23 2.23 4.24 2.06 7.88 2 8.94 2 9.28 2 12s0 3.06.06 4.12c.17 3.64 2.18 5.65 5.82 5.82C8.94 22 9.28 22 12 22s3.06 0 4.12-.06c3.63-.17 5.66-2.18 5.82-5.82.06-1.06.06-1.4.06-4.12s0-3.06-.06-4.12c-.16-3.63-2.18-5.65-5.82-5.82C15.06 2 14.72 2 12 2z"/></svg>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/233552821046" target="_blank" rel="noopener" class="social" aria-label="Chat on WhatsApp">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.4 5.1 5.24-1.37A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.1.82.83-3.03-.2-.31a8.2 8.2 0 1 1 6.97 3.85zm4.5-6.15c-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.78.96-.14.17-.29.19-.53.06-.25-.12-1.05-.38-1.99-1.22-.74-.66-1.23-1.47-1.38-1.72-.14-.24-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.66.31c-.22.25-.86.85-.86 2.06s.88 2.39 1 2.55c.13.17 1.74 2.65 4.2 3.72.59.25 1.05.4 1.4.52.6.19 1.13.16 1.56.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.47-.29z"/></svg>
+                <span>WhatsApp</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!--
+          This form does NOT send messages from the website. It opens the
+          visitor's own email app with the message pre-filled (mailto:).
+          To receive messages directly, connect a form service such as
+          Formspree or Netlify Forms (see README.md).
+        -->
+        <form class="compose reveal" id="compose-form" novalidate>
+          <div class="compose__head">
+            <h3>Write an email</h3>
+            <p>Fill this in and it will open in <strong>your email app</strong>, ready to send. Nothing is sent from this website.</p>
+          </div>
+
+          <div class="field">
+            <label for="cf-name">Your name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="cf-subject">Subject</label>
+            <input id="cf-subject" name="subject" type="text" required>
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" required></textarea>
+          </div>
+          <p class="compose__error" id="compose-error" role="alert" hidden>Please fill in your name, a subject and a message.</p>
+          <button type="submit" class="btn btn--pill btn--burgundy">
+            Open in my email app
+            <span class="btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= 9. FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <ul class="footer__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Work</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#cv">CV</a></li>
+        </ul>
+        <a class="footer__email" href="mailto:michaelyeboah735@gmail.com">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          michaelyeboah735@gmail.com
+        </a>
+      </div>
+
+      <p class="footer__wordmark" aria-hidden="true">Michael <span>Yeboah</span></p>
+
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> Michael Osei Yeboah. All rights reserved.</p>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Small notification used by "coming soon" links and the copy button -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

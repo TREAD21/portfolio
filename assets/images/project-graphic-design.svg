@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Georgia,serif">
+  <rect width="800" height="520" fill="#101010"/>
+  <g transform="rotate(-6 250 270)">
+    <rect x="110" y="70" width="260" height="370" rx="6" fill="#800020"/>
+    <circle cx="300" cy="170" r="70" fill="#D4AF37"/>
+    <rect x="140" y="260" width="200" height="4" fill="#ffffff" fill-opacity=".6"/>
+    <text x="140" y="320" font-size="44" fill="#ffffff">Design</text>
+    <text x="140" y="364" font-size="44" font-style="italic" fill="#D4AF37">matters.</text>
+    <g fill="#ffffff" fill-opacity=".4"><rect x="140" y="392" width="120" height="6" rx="3"/><rect x="140" y="406" width="90" height="6" rx="3"/></g>
+  </g>
+  <rect x="430" y="70" width="270" height="170" rx="14" fill="#f6f5f3"/>
+  <g transform="translate(565 155)">
+    <circle r="48" fill="none" stroke="#800020" stroke-width="6"/>
+    <path d="M-24 18 L-24 -18 L0 6 L24 -18 L24 18" fill="none" stroke="#101010" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cy="-36" r="6" fill="#D4AF37"/>
+  </g>
+  <g transform="translate(430 266)">
+    <rect width="62" height="174" rx="10" fill="#800020"/>
+    <rect x="70" width="62" height="174" rx="10" fill="#D4AF37"/>
+    <rect x="140" width="62" height="174" rx="10" fill="#ffffff"/>
+    <rect x="208" width="62" height="174" rx="10" fill="#2a2a2a" stroke="#ffffff" stroke-opacity=".2"/>
+    <g font-family="Helvetica,Arial,sans-serif" font-size="10" letter-spacing="1"><text x="10" y="160" fill="#ffffff">#800020</text><text x="80" y="160" fill="#101010">#D4AF37</text><text x="150" y="160" fill="#101010">#FFFFFF</text><text x="218" y="160" fill="#ffffff">#101010</text></g>
+  </g>
+  <text x="700" y="500" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#ffffff" fill-opacity=".45" letter-spacing="2">PLACEHOLDER IMAGE</text>
+</svg>
