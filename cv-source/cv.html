@@ -2,10 +2,10 @@
 <style>
 @page { size: A4; margin: 0; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Times New Roman', Times, serif; color: #101010; font-size: 10pt; line-height: 1.42;
+body { font-family: 'Times New Roman', Times, serif; color: #101010; font-size: 9.3pt; line-height: 1.34;
   -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-.page { width: 210mm; min-height: 297mm; padding-bottom: 12mm; }
-header { display: flex; align-items: center; gap: 8mm; padding: 10mm 16mm 9mm; color: #fff;
+.page { width: 210mm; height: 297mm; overflow: hidden; padding-bottom: 0; }
+header { display: flex; align-items: center; gap: 8mm; padding: 9mm 16mm 8mm; color: #fff;
   background: radial-gradient(60% 120% at 90% 0%, rgba(212,175,55,.22), transparent 60%), linear-gradient(135deg, #800020, #4a0013 70%, #101010); }
 header .id { flex: 1; min-width: 0; }
 h1 { font-family: 'Times New Roman', Times, serif; font-size: 27pt; font-weight: 600; letter-spacing: -.02em; line-height: 1.05; }
@@ -15,14 +15,14 @@ h1 { font-family: 'Times New Roman', Times, serif; font-size: 27pt; font-weight:
 header img { width: 33mm; height: 38mm; object-fit: cover; object-position: center 18%; border-radius: 4mm; border: 1.2mm solid rgba(212,175,55,.85); }
 main { padding: 2mm 16mm 0; display: grid; grid-template-columns: 1fr 58mm; gap: 9mm; }
 h2 { font-family: 'Times New Roman', Times, serif; font-size: 10pt; letter-spacing: .14em; text-transform: uppercase; color: #800020;
-  border-bottom: .5mm solid #D4AF37; padding-bottom: 1.2mm; margin: 5.5mm 0 2.6mm; }
+  border-bottom: .5mm solid #D4AF37; padding-bottom: 1.2mm; margin: 4.6mm 0 2.2mm; }
 h3 { font-size: 10.4pt; font-weight: 700; }
 .row { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
 .dates { font-size: 8.5pt; color: #5a5a5a; font-weight: 700; white-space: nowrap; }
 .org { color: #9a7a22; font-weight: 700; font-size: 9.2pt; margin: .5mm 0 1.2mm; }
-.entry { margin-bottom: 3.5mm; }
+.entry { margin-bottom: 2.6mm; }
 ul { padding-left: 4.5mm; } li { margin-bottom: .6mm; } li::marker { color: #800020; }
-.proj { margin-bottom: 2.3mm; } .proj p { color: #5a5a5a; font-size: 9pt; }
+.proj { margin-bottom: 1.8mm; } .proj p { color: #5a5a5a; font-size: 8.7pt; }
 .side { background: #f4f2f0; border-radius: 0 0 4mm 4mm; padding: 0 5mm 5mm; }
 .kv { margin-bottom: 2.4mm; font-size: 9pt; } .kv b { display: block; color: #800020; font-size: 8.8pt; }
 mark { background: #fff3b0; color: inherit; padding: 0 .4mm; }
@@ -31,9 +31,9 @@ mark { background: #fff3b0; color: inherit; padding: 0 .4mm; }
 <img src="../assets/images/profile.jpg" alt=""></header>
 <main><div>
 <h2>Profile</h2><p>Accounting graduate (BSc, University of Ghana) working as Accountant / Administrator at Deseret School of Design. I combine finance and administration with practical web development and graphic design: I build tools that turn financial and operational data into clear reports, and I design the material that presents them.</p>
-<h2>Experience</h2><div class="entry"><div class="row"><h3>Accountant / Administrator</h3><span class="dates">Present</span></div><p class="org">Deseret School of Design, North Legon, Accra</p><ul><li>Keep the school&#x27;s accounts and financial records.</li><li>Handle day-to-day administration of the school.</li></ul></div>
-<h2>Education</h2><div class="entry"><div class="row"><h3>BSc Accounting</h3><span class="dates"></span></div><p class="org">University of Ghana, Legon</p></div>
+<h2>Experience</h2><div class="entry"><div class="row"><h3>Accountant / Administrator</h3><span class="dates">Nov 2026 – Present</span></div><p class="org">Deseret School of Design, North Legon, Accra</p><ul><li>Keep the school&#x27;s accounts and financial records.</li><li>Handle day-to-day administration of the school.</li><li>Prepare monthly reports, handle fee collection, and assist with payroll and supplier payments.</li></ul></div>
+<h2>Education</h2><div class="entry"><div class="row"><h3>BSc Accounting</h3><span class="dates">2021 – 2025</span></div><p class="org">University of Ghana, Legon</p></div><div class="entry"><div class="row"><h3>WASSCE</h3><span class="dates">2015 – 2018</span></div><p class="org">Oyoko Methodist Senior High School</p></div>
 <h2>Courses &amp; learning</h2><div class="entry"><div class="row"><h3>Web development &amp; data tools (self-directed)</h3><span class="dates">Ongoing</span></div><p class="org">Project-based learning</p><ul><li>JavaScript, TypeScript, Next.js, Node.js, SQL databases, Git.</li></ul></div>
-<h2>Selected projects</h2><div class="proj"><h3>Sika — Fintech App (in development)</h3><p>Ghana fintech app: wallets, P2P transfers, mobile money and bill payments on a double-entry ledger. Next.js, TypeScript, Express, PostgreSQL, Paystack.</p></div><div class="proj"><h3>St. Peter&#x27;s Mission Schools — Website &amp; Staff Portal (in progress)</h3><p>Role-based portal for students, attendance, grades, fees, payroll, expenses, P&amp;L and balance sheet. JavaScript, Node.js, SQLite.</p></div><div class="proj"><h3>Financial Reporting Dashboard — SME Finance</h3><p>Sales, expenses, net profit and cash / mobile money / bank balances for small businesses, with PDF and Excel export.</p></div><div class="proj"><h3>Personal Portfolio Website</h3><p>Responsive, accessible portfolio designed and hand-coded in HTML, CSS and JavaScript.</p></div>
-</div><aside class="side"><h2>Skills</h2><p class="kv"><b>Finance &amp; accounting:</b> Bookkeeping, reconciliation, financial statements, budgeting, variance analysis</p><p class="kv"><b>Reporting:</b> Microsoft Excel, pivot tables, KPI design, data visualisation</p><p class="kv"><b>Web development:</b> HTML, CSS, JavaScript, TypeScript, Git</p><p class="kv"><b>App development:</b> React / Next.js, Node.js, REST APIs, SQL databases, installable web apps (PWA)</p><p class="kv"><b>Graphic design:</b> Photoshop, Illustrator, Canva, typography</p><p class="kv"><b>Administration:</b> Documentation, data cleaning and analysis, Microsoft Office</p><h2>Additional</h2><p class="kv"><b>Languages:</b> English</p><p class="kv"><b>References:</b> Available on request.</p></aside></main>
+<h2>Selected projects</h2><div class="proj"><h3>Sika — Fintech App (in development)</h3><p>Ghana fintech app: wallets, P2P transfers, mobile money and bill payments on a double-entry ledger. Next.js, TypeScript, Express, PostgreSQL, Paystack.</p></div><div class="proj"><h3>St. Peter&#x27;s Mission Schools — Website &amp; Staff Portal (in progress)</h3><p>Role-based portal for students, attendance, grades, fees, payroll, expenses, P&amp;L and balance sheet. JavaScript, Node.js, SQLite.</p></div><div class="proj"><h3>Financial Reporting Dashboard — SME Finance</h3><p>Sales, expenses, net profit and cash / mobile money / bank balances for small businesses, with PDF and Excel export.</p></div><div class="proj"><h3>BIZWISE — Business Finance App (in development)</h3><p>Sales, customer invoices, order tracking, inventory and finances for small businesses, with exact pesewa totals. Node.js, Express, SQLite.</p></div><div class="proj"><h3>Personal Portfolio Website</h3><p>Responsive, accessible portfolio designed and hand-coded in HTML, CSS and JavaScript.</p></div>
+</div><aside class="side"><h2>Skills</h2><p class="kv"><b>Finance &amp; accounting:</b> Bookkeeping, reconciliation, financial statements, budgeting, variance analysis</p><p class="kv"><b>Reporting:</b> Microsoft Excel, Pivot tables, KPI design, Data visualisation</p><p class="kv"><b>Web development:</b> HTML, CSS, JavaScript, Git</p><p class="kv"><b>App development:</b> React / Next.js, Node.js, REST APIs, SQL databases, Installable web apps (PWA)</p><p class="kv"><b>Graphic design:</b> Photoshop, Illustrator, Canva</p><p class="kv"><b>Administration:</b> Documentation, data cleaning and analysis, Microsoft Office</p><h2>Additional</h2><p class="kv"><b>Languages:</b> English, French, Twi</p><p class="kv"><b>References:</b> Available on request.</p></aside></main>
 </div></body></html>
