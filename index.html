@@ -36,6 +36,10 @@
   <!-- Marks that JavaScript is available before first paint (prevents a flash of un-animated content) -->
   <script>document.documentElement.classList.add("js");</script>
 
+  <!-- Vercel Web Analytics (visitor counts; no cookies). Only reports on the live site. -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+
   <!-- Structured data for search engines -->
   <script type="application/ld+json">
   {
