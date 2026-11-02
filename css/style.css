@@ -1162,8 +1162,9 @@ button { font: inherit; }
   .about__visual { padding-top: 0; }
   .about__note { display: none; }
   .about__photo, .portrait__placeholder { width: 78%; }
-  .float-card { width: 58%; padding: .75rem; }
-  .float-card img { display: none; }
+  /* Card sits under the photo, overlapping it slightly, so the dashboard image stays visible */
+  .float-card { position: relative; width: 72%; margin: -4.5rem 0 0 auto; padding: .75rem; }
+  .float-card img { margin-bottom: .75rem; border-radius: 10px; }
   .cv__actions .btn { width: 100%; }
   .footer__top { flex-direction: column; align-items: flex-start; }
 }
