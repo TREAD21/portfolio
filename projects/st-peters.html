@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>St. Peter’s Mission Schools Case Study · Michael Osei Yeboah</title>
+  <meta name="description" content="Case study: a public website and role-based staff portal for St. Peter’s Mission Schools, covering admissions, fees, payroll and financial reports, by Michael Osei Yeboah.">
+  <meta name="author" content="Michael Osei Yeboah">
+  <meta name="theme-color" content="#101010">
+  <link rel="canonical" href="https://michael-osei-yeboah.vercel.app/projects/st-peters.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="St. Peter’s Mission Schools — Website &amp; Staff Portal">
+  <meta property="og:description" content="A school website and staff portal for admissions, fees, payroll and financial reports.">
+  <meta property="og:url" content="https://michael-osei-yeboah.vercel.app/projects/st-peters.html">
+  <meta property="og:image" content="https://michael-osei-yeboah.vercel.app/assets/images/project-st-peters.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <div class="nav__bar">
+        <a href="../index.html" class="brand" aria-label="Michael Osei Yeboah — home">
+          <span class="brand__mark" aria-hidden="true">MY</span>
+          <span class="brand__name">Michael Yeboah</span>
+        </a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__links">
+            <li><a href="../index.html#about" class="nav__link">About</a></li>
+            <li><a href="../index.html#skills" class="nav__link">Skills</a></li>
+            <li><a href="../index.html#projects" class="nav__link is-active" aria-current="true">Work</a></li>
+            <li><a href="../index.html#experience" class="nav__link">Experience</a></li>
+            <li><a href="../index.html#cv" class="nav__link">CV</a></li>
+          </ul>
+          <a href="../index.html#contact" class="btn btn--glass btn--sm nav__cta">Get in touch</a>
+        </div>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="container">
+        <a class="case-back" href="../index.html#projects"><span aria-hidden="true">←</span> All projects</a>
+        <p class="eyebrow">Case study · School system</p>
+        <h1 class="case-hero__title" id="case-title">St. Peter’s Mission Schools — <span class="accent">website &amp; staff portal</span></h1>
+        <p class="case-hero__lead">A public website and a role-based staff portal for a Creche-to-SHS school in Accra. Parents apply online; inside, the headmaster, administrators, teachers and accountants each get their own view of students, attendance, grades, fees, payroll and the school’s finances.</p>
+
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>Design &amp; development</dd></div>
+          <div><dt>Status</dt><dd>Website live · portal in progress</dd></div>
+          <div><dt>Users</dt><dd>Parents and six staff roles</dd></div>
+          <div><dt>Stack</dt><dd>JavaScript · Node.js · SQLite</dd></div>
+        </dl>
+
+        <div class="case-actions">
+          <a class="btn btn--pill btn--gold" href="https://school-website-mu-tawny.vercel.app" target="_blank" rel="noopener">
+            Visit the website
+            <span class="btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <figure class="case-cover case-figure">
+        <img src="../assets/images/case/portal-accountant-overview.jpg" alt="Staff portal accountant dashboard with a finance scorecard: fees collected 65.5%, outstanding fees GH₵36,245 and expenses this month" width="1600" height="1000">
+        <figcaption>The accountant’s dashboard. All names and figures in these screenshots are fictional demo data.</figcaption>
+      </figure>
+
+      <div class="case-body">
+        <section class="case-section" aria-labelledby="s-problem">
+          <h2 class="case-section__label" id="s-problem"><span>01</span>The problem</h2>
+          <div>
+            <p>Running a school means tracking hundreds of students across levels from Creche to SHS, collecting fees in instalments, paying staff with SSNIT and PAYE deducted, and reporting to the headmaster and board. Much of that usually lives in paper registers, spreadsheets and WhatsApp messages.</p>
+            <p>The goal was one system where each person sees exactly what their job needs, with the accounting done properly: fees, payroll and expenses that flow into a profit and loss statement and a balance sheet.</p>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="s-built">
+          <h2 class="case-section__label" id="s-built"><span>02</span>What I built</h2>
+          <div>
+            <div class="case-features">
+              <div class="case-feature"><h3>Public website</h3><p>Programmes, departments, facilities, calendar and an online admissions form that sends each application straight to the portal.</p></div>
+              <div class="case-feature"><h3>Fees &amp; fee bills</h3><p>Fee structures broken down per class level, part payments and balances, and PDF fee bills emailed to every parent.</p></div>
+              <div class="case-feature"><h3>Payroll</h3><p>SSNIT tiers and GRA PAYE bands applied to each payslip. The accountant prepares, the headmaster approves, and paying records the expense.</p></div>
+              <div class="case-feature"><h3>Financial reports</h3><p>Profit and loss for any date range and a balance sheet as at any date, downloadable as PDFs on the school letterhead.</p></div>
+              <div class="case-feature"><h3>Academics</h3><p>Attendance, grades, timetables without clashes, and report cards with class position, emailed to parents as PDFs.</p></div>
+              <div class="case-feature"><h3>KPI scorecards</h3><p>Every dashboard opens with targets for that role: fee collection, attendance, pass rate, payroll status.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="s-how">
+          <h2 class="case-section__label" id="s-how"><span>03</span>How it works</h2>
+          <div>
+            <p>The website is static HTML, CSS and JavaScript. The portal is a Node.js and Express server with a SQLite database and a plain JavaScript front end, so it can run on a modest school server.</p>
+            <ul class="case-list">
+              <li><strong>Permissions enforced on the server.</strong> A teacher who types another class’s address still gets “You do not have access”; hiding menu items isn’t treated as security.</li>
+              <li><strong>Separation of duties.</strong> Accountants record expenses and prepare payroll, but only the headmaster can approve them for payment, and approved payroll figures lock.</li>
+              <li><strong>Privacy by role.</strong> Teachers see their students’ health and special-needs notes; accountants never do.</li>
+              <li><strong>Installable app (PWA).</strong> Staff can install the portal on their phones; school data is never cached, so records are always current.</li>
+              <li><strong>Audit log.</strong> Sign-ins and changes are recorded for the system admin to review.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="s-screens">
+          <h2 class="case-section__label" id="s-screens"><span>04</span>Screens</h2>
+          <div class="case-gallery">
+            <figure class="case-figure case-figure--wide">
+              <img src="../assets/images/case/portal-reports.jpg" alt="Financial reports page with income GH₵68,955, expenses GH₵73,136 and a profit and loss statement" width="1600" height="1000" loading="lazy">
+              <figcaption>Profit and loss, built from fees received, expenses and payroll.</figcaption>
+            </figure>
+            <figure class="case-figure">
+              <img src="../assets/images/case/portal-fees.jpg" alt="Fees and payments page listing students with billed, paid and balance amounts and paid or part-paid status" width="1600" height="1000" loading="lazy">
+              <figcaption>Fee balances by student, with part payments.</figcaption>
+            </figure>
+            <figure class="case-figure">
+              <img src="../assets/images/case/spms-admissions.jpg" alt="School website admissions page explaining how admission works" width="1600" height="1000" loading="lazy">
+              <figcaption>The public website’s admissions page.</figcaption>
+            </figure>
+            <figure class="case-figure case-figure--wide">
+              <img src="../assets/images/project-st-peters.jpg" alt="School website home page: “Welcome to the Noble Family”" width="1440" height="900" loading="lazy">
+              <figcaption>The website’s home page.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="s-learned">
+          <h2 class="case-section__label" id="s-learned"><span>05</span>What I took from it</h2>
+          <div>
+            <p>This project sits right where my accounting and my development work meet. Getting payroll deductions, fee arrears and the link from transactions to the financial statements right mattered as much as the screens did, and approval steps like the headmaster signing off payroll are internal controls written into code.</p>
+            <p><strong>Next:</strong> putting the portal online on the school’s server and connecting an SMS provider for parent broadcasts.</p>
+          </div>
+        </section>
+
+        <div class="case-next">
+          <div>
+            <p>Next case study</p>
+            <h2>Sika — Fintech App</h2>
+          </div>
+          <a class="btn btn--pill btn--dark" href="sika.html">
+            Read it
+            <span class="btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <ul class="footer__links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#projects">Work</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#cv">CV</a></li>
+        </ul>
+        <a class="footer__email" href="mailto:michaelyeboah735@gmail.com">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          michaelyeboah735@gmail.com
+        </a>
+      </div>
+      <p class="footer__wordmark" aria-hidden="true">Michael <span>Yeboah</span></p>
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> Michael Osei Yeboah. All rights reserved.</p>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

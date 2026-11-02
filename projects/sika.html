@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sika — Fintech App Case Study · Michael Osei Yeboah</title>
+  <meta name="description" content="Case study: Sika, a Ghana fintech app for wallets, transfers, mobile money and bill payments, built on a double-entry ledger by Michael Osei Yeboah.">
+  <meta name="author" content="Michael Osei Yeboah">
+  <meta name="theme-color" content="#101010">
+  <link rel="canonical" href="https://michael-osei-yeboah.vercel.app/projects/sika.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Sika — Fintech App Case Study">
+  <meta property="og:description" content="Wallets, transfers, mobile money and bill payments for Ghana, on a double-entry ledger.">
+  <meta property="og:url" content="https://michael-osei-yeboah.vercel.app/projects/sika.html">
+  <meta property="og:image" content="https://michael-osei-yeboah.vercel.app/assets/images/project-sika.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <div class="nav__bar">
+        <a href="../index.html" class="brand" aria-label="Michael Osei Yeboah — home">
+          <span class="brand__mark" aria-hidden="true">MY</span>
+          <span class="brand__name">Michael Yeboah</span>
+        </a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__links">
+            <li><a href="../index.html#about" class="nav__link">About</a></li>
+            <li><a href="../index.html#skills" class="nav__link">Skills</a></li>
+            <li><a href="../index.html#projects" class="nav__link is-active" aria-current="true">Work</a></li>
+            <li><a href="../index.html#experience" class="nav__link">Experience</a></li>
+            <li><a href="../index.html#cv" class="nav__link">CV</a></li>
+          </ul>
+          <a href="../index.html#contact" class="btn btn--glass btn--sm nav__cta">Get in touch</a>
+        </div>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="container">
+        <a class="case-back" href="../index.html#projects"><span aria-hidden="true">←</span> All projects</a>
+        <p class="eyebrow">Case study · Fintech</p>
+        <h1 class="case-hero__title" id="case-title">Sika — <span class="accent">money that moves the way you live</span></h1>
+        <p class="case-hero__lead">A fintech app for Ghana: a wallet you fund from mobile money, transfers to any network, and payments for electricity, water and airtime. Underneath it is a double-entry ledger, the same principle an accountant uses, so every cedi can be traced and every balance checked.</p>
+
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>Product design &amp; development</dd></div>
+          <div><dt>Status</dt><dd>Beta testing</dd></div>
+          <div><dt>Platform</dt><dd>Web app, installable on phones (PWA)</dd></div>
+          <div><dt>Stack</dt><dd>Next.js · Express · PostgreSQL</dd></div>
+        </dl>
+
+        <div class="case-actions">
+          <a class="btn btn--pill btn--gold" href="https://sika-iota-six.vercel.app/" target="_blank" rel="noopener">
+            Try the beta
+            <span class="btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <figure class="case-cover case-figure">
+        <img src="../assets/images/case/sika-landing.jpg" alt="Sika's home page with the headline “Money that moves the way you live” and a phone showing a wallet balance" width="1600" height="1000">
+      </figure>
+
+      <div class="case-body">
+        <section class="case-section" aria-labelledby="s-problem">
+          <h2 class="case-section__label" id="s-problem"><span>01</span>The problem</h2>
+          <div>
+            <p>In Ghana, most everyday payments already run on mobile money, but they're split across networks and apps. Sending to someone on a different network, paying the ECG or water bill and topping up airtime can each mean a different menu, a different fee and a different receipt.</p>
+            <p>I wanted one place to do all of it, built so that the money side is trustworthy: balances that can't drift, payments that can't be applied twice, and a full trail behind every transaction.</p>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="s-built">
+          <h2 class="case-section__label" id="s-built"><span>02</span>What I built</h2>
+          <div>
+            <div class="case-features">
+              <div class="case-feature"><h3>Wallet</h3><p>Fund it from MTN MoMo, Telecel Cash or AT Money, link accounts and request money.</p></div>
+              <div class="case-feature"><h3>Send money</h3><p>Transfers to people on any network, with saved recipients and a voice-assisted send option.</p></div>
+              <div class="case-feature"><h3>Bills &amp; airtime</h3><p>ECG electricity, Ghana Water and airtime top-ups from the same balance.</p></div>
+              <div class="case-feature"><h3>Notifications</h3><p>SMS receipts sent through an outbox, so a failed message is retried rather than lost.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="s-how">
+          <h2 class="case-section__label" id="s-how"><span>03</span>How it works</h2>
+          <div>
+            <p>Sika is a monorepo with a Next.js and Tailwind front end, an Express API and a PostgreSQL database. Payments come in through Paystack and SMS goes out through Arkesel.</p>
+            <ul class="case-list">
+              <li><strong>Double-entry ledger in the database.</strong> Every transaction is a journal entry with at least two postings that sum to zero; the database rejects any entry that doesn't balance.</li>
+              <li><strong>Amounts in pesewas, never decimals.</strong> Money is stored as whole numbers, so totals never pick up rounding errors.</li>
+              <li><strong>Append-only history.</strong> Postings are never edited or deleted. A mistake is corrected with a reversing entry, just as in a set of books.</li>
+              <li><strong>Safe to retry.</strong> Each payment carries an idempotency key, so if Paystack sends the same confirmation twice, the wallet is credited once.</li>
+              <li><strong>Built-in reconciliation.</strong> A check compares every cached balance with its postings and lists any account that disagrees. Mismatched or suspicious deposits go to a suspense account for review.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="s-screens">
+          <h2 class="case-section__label" id="s-screens"><span>04</span>Screens</h2>
+          <div class="case-gallery">
+            <figure class="case-figure case-figure--wide">
+              <video src="../assets/video/sika-launch.mp4" poster="../assets/images/project-sika.jpg" controls muted playsinline preload="none" style="width:100%;border-radius:16px;display:block;background:#101010"></video>
+              <figcaption>The Sika launch video.</figcaption>
+            </figure>
+            <figure class="case-figure case-figure--phone">
+              <img src="../assets/images/case/sika-welcome-mobile.jpg" alt="Sika onboarding screen on a phone: “Welcome to Sika. Sika means money.”" width="450" height="974" loading="lazy">
+              <figcaption>Onboarding on a phone, the main way people use it.</figcaption>
+            </figure>
+            <figure class="case-figure">
+              <img src="../assets/images/project-sika.jpg" alt="Sika launch poster with MTN MoMo, Telecel Cash and AT Money badges" width="1280" height="720" loading="lazy">
+              <figcaption>Launch artwork: one app for all three networks.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="s-learned">
+          <h2 class="case-section__label" id="s-learned"><span>05</span>What I took from it</h2>
+          <div>
+            <p>Building Sika showed me how directly accounting carries over into software. Debits, credits, reversing entries and reconciliation aren't just exam topics; they're the rules that keep a payments system honest. Writing them into the database itself means no part of the app can break them by accident.</p>
+            <p><strong>Next:</strong> learning from beta testers and widening early access.</p>
+          </div>
+        </section>
+
+        <div class="case-next">
+          <div>
+            <p>Next case study</p>
+            <h2>St. Peter’s Mission Schools</h2>
+          </div>
+          <a class="btn btn--pill btn--dark" href="st-peters.html">
+            Read it
+            <span class="btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <ul class="footer__links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#projects">Work</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#cv">CV</a></li>
+        </ul>
+        <a class="footer__email" href="mailto:michaelyeboah735@gmail.com">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          michaelyeboah735@gmail.com
+        </a>
+      </div>
+      <p class="footer__wordmark" aria-hidden="true">Michael <span>Yeboah</span></p>
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> Michael Osei Yeboah. All rights reserved.</p>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

@@ -7,6 +7,7 @@ MY Portfolio/
 ├── index.html                      Page structure, content and SEO metadata
 ├── css/style.css                   All styling (tokens, layout, responsive, reduced motion)
 ├── js/script.js                    Menu, active nav, scroll reveal, toast, copy email, compose form
+├── projects/                       Case study pages (sika.html, st-peters.html)
 └── assets/
     ├── images/
     │   ├── favicon.svg
