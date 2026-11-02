@@ -35,9 +35,15 @@ module.exports = async (req, res) => {
         _captcha: "false",
       }),
     });
-    const data = await upstream.json().catch(() => ({}));
+    const text = await upstream.text();
+    const data = safeJson(text);
     const ok = upstream.ok && String(data.success) === "true";
-    return res.status(ok ? 200 : 502).json({ success: ok, message: data.message || (ok ? "Sent" : "The mail service didn't accept the message.") });
+    if (!ok) console.error("FormSubmit rejected message", upstream.status, text.slice(0, 300));
+    return res.status(ok ? 200 : 502).json({
+      success: ok,
+      message: data.message || (ok ? "Sent" : "The mail service didn't accept the message."),
+      upstreamStatus: ok ? undefined : upstream.status,
+    });
   } catch (err) {
     return res.status(502).json({ success: false, message: "The mail service couldn't be reached." });
   }
