@@ -237,15 +237,16 @@
     });
   });
 
-  /* ---------- Contact form (sends through FormSubmit) ---------- */
-  // Posts the message to FormSubmit, which emails it to RECIPIENT. If sending fails,
-  // the visitor is offered a pre-filled email in their own app instead.
+  /* ---------- Contact form (sends through /api/contact) ---------- */
+  // Posts to the site's own /api/contact function, which forwards the message to FormSubmit
+  // (some networks block formsubmit.co directly). If sending fails, the visitor is offered
+  // a pre-filled email in their own app instead.
   const form = document.getElementById("compose-form");
   const formError = document.getElementById("compose-error");
   const formStatus = document.getElementById("compose-status");
   const submitButton = document.getElementById("compose-submit");
   const RECIPIENT = "michaelyeboah735@gmail.com";
-  const ENDPOINT = "https://formsubmit.co/ajax/" + RECIPIENT;
+  const ENDPOINT = "/api/contact";
 
   function setStatus(html, kind) {
     formStatus.innerHTML = html;
@@ -282,15 +283,14 @@
         const res = await fetch(ENDPOINT, {
           method: "POST",
           headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify({
-            name, email, message,
-            _subject: "Portfolio message: " + subject,
-            _replyto: email,
-            _template: "table",
-            _captcha: "false",
-          }),
+          body: JSON.stringify({ name, email, subject, message, _honey: form.elements._honey.value }),
         });
         const data = await res.json().catch(() => ({}));
+        if (/activat/i.test(data.message || "")) {
+          // FormSubmit holds the very first message until the inbox owner clicks its activation link
+          setStatus("Almost there: this form is waiting for activation. Check " + RECIPIENT + " for an email from FormSubmit and click its activation link, then send again.", "error");
+          return;
+        }
         if (!res.ok || String(data.success) !== "true") throw new Error(data.message || "Send failed");
         form.reset();
         setStatus("Thanks, " + name.split(" ")[0].replace(/[<>&"]/g, "") + "! Your message has been sent. I’ll get back to you soon.", "ok");
