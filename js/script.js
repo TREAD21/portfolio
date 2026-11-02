@@ -237,39 +237,71 @@
     });
   });
 
-  /* ---------- Compose-email form (opens the visitor's email app) ---------- */
-  // This does NOT send anything from the website. It builds a mailto: link.
+  /* ---------- Contact form (sends through FormSubmit) ---------- */
+  // Posts the message to FormSubmit, which emails it to RECIPIENT. If sending fails,
+  // the visitor is offered a pre-filled email in their own app instead.
   const form = document.getElementById("compose-form");
   const formError = document.getElementById("compose-error");
+  const formStatus = document.getElementById("compose-status");
+  const submitButton = document.getElementById("compose-submit");
   const RECIPIENT = "michaelyeboah735@gmail.com";
+  const ENDPOINT = "https://formsubmit.co/ajax/" + RECIPIENT;
+
+  function setStatus(html, kind) {
+    formStatus.innerHTML = html;
+    formStatus.dataset.kind = kind;
+    formStatus.hidden = false;
+  }
 
   if (form) {
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
+      formStatus.hidden = true;
 
-      const fields = ["name", "subject", "message"].map((n) => form.elements[n]);
+      const fields = ["name", "email", "subject", "message"].map((n) => form.elements[n]);
       let valid = true;
       fields.forEach((field) => {
-        const empty = field.value.trim() === "";
-        field.setAttribute("aria-invalid", String(empty));
-        if (empty) valid = false;
+        const value = field.value.trim();
+        const bad = value === "" || (field.type === "email" && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(value));
+        field.setAttribute("aria-invalid", String(bad));
+        if (bad) valid = false;
       });
-
       formError.hidden = valid;
       if (!valid) {
-        fields.find((f) => f.value.trim() === "").focus();
+        fields.find((f) => f.getAttribute("aria-invalid") === "true").focus();
         return;
       }
+      if (form.elements._honey.value) return; // spam trap filled in
 
-      const [name, subject, message] = fields.map((f) => f.value.trim());
-      const body = message + "\n\n— " + name;
-      const href =
-        "mailto:" + RECIPIENT +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
+      const [name, email, subject, message] = fields.map((f) => f.value.trim());
+      const label = submitButton.querySelector(".compose__label");
+      submitButton.disabled = true;
+      label.textContent = "Sending…";
 
-      window.location.href = href;
-      showToast("Opening your email app…");
+      try {
+        const res = await fetch(ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            name, email, message,
+            _subject: "Portfolio message: " + subject,
+            _replyto: email,
+            _template: "table",
+            _captcha: "false",
+          }),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || String(data.success) !== "true") throw new Error(data.message || "Send failed");
+        form.reset();
+        setStatus("Thanks, " + name.split(" ")[0].replace(/[<>&"]/g, "") + "! Your message has been sent. I’ll get back to you soon.", "ok");
+      } catch (err) {
+        const href = "mailto:" + RECIPIENT + "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(message + "\n\n— " + name + " (" + email + ")");
+        setStatus("Sorry, the message couldn’t be sent just now. <a href=\"" + href + "\">Send it from your email app instead</a>.", "error");
+      } finally {
+        submitButton.disabled = false;
+        label.textContent = "Send message";
+      }
     });
 
     form.addEventListener("input", (event) => {

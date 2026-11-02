@@ -65,7 +65,11 @@ Search `index.html` for `Placeholder`, `Sample description`, `coming-soon` and `
 
 ## Contact form
 
-The form does **not** send messages from the site. It opens the visitor's own email app with a pre-filled message (`mailto:`). To receive submissions directly, use a form service, e.g. Formspree: create a form, then change the `<form>` to `action="https://formspree.io/f/YOUR_ID" method="POST"`, and remove the submit handler in `js/script.js` (the "Compose-email form" block). Update the form's helper text to match.
+The form sends messages straight to michaelyeboah735@gmail.com through [FormSubmit](https://formsubmit.co) (free, no account). The visitor's email is set as the reply-to address, so you can answer with Reply.
+
+**One-time activation:** the first message sent from the live site triggers an email from FormSubmit to that inbox. Click its activation link once (check Spam/Promotions); messages sent before activation are not delivered.
+
+If sending ever fails, the form offers the visitor a pre-filled email in their own app instead. The code is the "Contact form" block in `js/script.js`; to change the receiving address, edit `RECIPIENT` there.
 
 ## Live site
 

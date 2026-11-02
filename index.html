@@ -67,11 +67,11 @@
   }
   </script>
 </head>
-<body>
+<body id="top">
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- ================= 1. NAVIGATION ================= -->
-  <header class="site-header" id="top">
+  <header class="site-header">
     <nav class="nav container" aria-label="Primary">
       <div class="nav__bar">
         <a href="#top" class="brand">
@@ -666,20 +666,24 @@
         </div>
 
         <!--
-          This form does NOT send messages from the website. It opens the
-          visitor's own email app with the message pre-filled (mailto:).
-          To receive messages directly, connect a form service such as
-          Formspree or Netlify Forms (see README.md).
+          Messages are delivered to michaelyeboah735@gmail.com through FormSubmit
+          (formsubmit.co, free, no account). The very first message sends an
+          activation email to that inbox; click its link once and every message
+          after that arrives normally. Script: "Contact form" block in js/script.js.
         -->
         <form class="compose reveal" id="compose-form" novalidate>
           <div class="compose__head">
-            <h3>Write an email</h3>
-            <p>Fill this in and it will open in <strong>your email app</strong>, ready to send. Nothing is sent from this website.</p>
+            <h3>Send me a message</h3>
+            <p>Your message goes <strong>straight to my inbox</strong>. I’ll reply to the email address you give.</p>
           </div>
 
           <div class="field">
             <label for="cf-name">Your name</label>
             <input id="cf-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="cf-email">Your email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required>
           </div>
           <div class="field">
             <label for="cf-subject">Subject</label>
@@ -689,9 +693,15 @@
             <label for="cf-message">Message</label>
             <textarea id="cf-message" name="message" rows="5" required></textarea>
           </div>
-          <p class="compose__error" id="compose-error" role="alert" hidden>Please fill in your name, a subject and a message.</p>
-          <button type="submit" class="btn btn--pill btn--burgundy">
-            Open in my email app
+          <!-- Spam trap: hidden from people, bots tend to fill it in -->
+          <div class="field field--trap" aria-hidden="true">
+            <label for="cf-company">Company</label>
+            <input id="cf-company" name="_honey" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <p class="compose__error" id="compose-error" role="alert" hidden>Please fill in your name, a valid email, a subject and a message.</p>
+          <p class="compose__status" id="compose-status" role="status" aria-live="polite" hidden></p>
+          <button type="submit" class="btn btn--pill btn--burgundy" id="compose-submit">
+            <span class="compose__label">Send message</span>
             <span class="btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </button>
         </form>

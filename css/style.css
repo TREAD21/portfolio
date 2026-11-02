@@ -1371,3 +1371,14 @@ button { font: inherit; }
 @media (max-width: 860px) {
   .theme-toggle { margin-left: auto; margin-right: -1rem; }
 }
+
+/* Contact form: spam trap and send status */
+.field--trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.compose { position: relative; }
+.compose__status { margin: 0 0 1rem; padding: .8rem 1rem; border-radius: 12px; font-size: .9rem; line-height: 1.5; }
+.compose__status[data-kind="ok"] { color: #14532d; background: #dcfce7; }
+.compose__status[data-kind="error"] { color: #7f1d1d; background: #fee2e2; }
+.compose__status a { font-weight: 700; text-decoration: underline; }
+:root[data-theme="dark"] .compose__status[data-kind="ok"] { color: #bbf7d0; background: rgba(34, 197, 94, .14); }
+:root[data-theme="dark"] .compose__status[data-kind="error"] { color: #fecaca; background: rgba(239, 68, 68, .14); }
+#compose-submit[disabled] { opacity: .7; cursor: progress; }
