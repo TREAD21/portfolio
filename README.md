@@ -22,9 +22,12 @@ MY Portfolio/
     ├── video/
     │   └── sika-launch.mp4                 (first 10 s of the Sika launch video, 720p)
     └── cv/
-        └── Michael-Osei-Yeboah-CV.pdf      (the CV visitors download)
+        ├── Michael-Osei-Yeboah-CV.pdf      (the CV visitors download, 2 pages)
+        └── Michael-Osei-Yeboah-Resume.pdf  (one-page résumé)
 cv-source/
 ├── Michael-Osei-Yeboah-CV.docx             Editable CV (Word / Google Docs / Pages)
+├── Michael-Osei-Yeboah-Resume.docx         Editable one-page résumé
+├── resume.html                             Layout used to produce the résumé PDF
 └── cv.html                                 Layout used to produce the current PDF
 ```
 
