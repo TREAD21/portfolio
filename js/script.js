@@ -237,16 +237,16 @@
     });
   });
 
-  /* ---------- Contact form (sends through FormSubmit) ---------- */
-  // Posts straight from the visitor's browser to FormSubmit, which emails RECIPIENT.
-  // FormSubmit refuses server-to-server requests, so there is no relay. Some networks block
-  // formsubmit.co; if sending fails, the visitor is offered a pre-filled email instead.
+  /* ---------- Contact form (sends through Formspree) ---------- */
+  // Posts the message to Formspree (form xrppojby), which emails it to RECIPIENT with the
+  // visitor's address as reply-to. If sending fails, the visitor is offered a pre-filled
+  // email in their own app instead, so no message is lost.
   const form = document.getElementById("compose-form");
   const formError = document.getElementById("compose-error");
   const formStatus = document.getElementById("compose-status");
   const submitButton = document.getElementById("compose-submit");
   const RECIPIENT = "michaelyeboah735@gmail.com";
-  const ENDPOINT = "https://formsubmit.co/ajax/" + RECIPIENT;
+  const ENDPOINT = "https://formspree.io/f/xrppojby";
 
   function setStatus(html, kind) {
     formStatus.innerHTML = html;
@@ -272,7 +272,7 @@
         fields.find((f) => f.getAttribute("aria-invalid") === "true").focus();
         return;
       }
-      if (form.elements._honey.value) return; // spam trap filled in
+      if (form.elements._gotcha.value) return; // spam trap filled in
 
       const [name, email, subject, message] = fields.map((f) => f.value.trim());
       const label = submitButton.querySelector(".compose__label");
@@ -283,21 +283,10 @@
         const res = await fetch(ENDPOINT, {
           method: "POST",
           headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify({
-            name, email, message,
-            _subject: "Portfolio message: " + subject,
-            _replyto: email,
-            _template: "table",
-            _captcha: "false",
-          }),
+          body: JSON.stringify({ name, email, subject, message, _subject: "Portfolio message: " + subject }),
         });
         const data = await res.json().catch(() => ({}));
-        if (/activat/i.test(data.message || "")) {
-          // FormSubmit holds the very first message until the inbox owner clicks its activation link
-          setStatus("Almost there: this form is waiting for activation. Check " + RECIPIENT + " for an email from FormSubmit and click its activation link, then send again.", "error");
-          return;
-        }
-        if (!res.ok || String(data.success) !== "true") throw new Error(data.message || "Send failed");
+        if (!res.ok || data.ok === false) throw new Error((data.errors && data.errors[0] && data.errors[0].message) || "Send failed");
         form.reset();
         setStatus("Thanks, " + name.split(" ")[0].replace(/[<>&"]/g, "") + "! Your message has been sent. I’ll get back to you soon.", "ok");
       } catch (err) {

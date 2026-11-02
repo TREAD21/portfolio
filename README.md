@@ -68,11 +68,9 @@ Search `index.html` for `Placeholder`, `Sample description`, `coming-soon` and `
 
 ## Contact form
 
-The form sends messages straight from the visitor's browser to [FormSubmit](https://formsubmit.co) (free, no account, already activated), which emails them to michaelyeboah735@gmail.com with the visitor's email as reply-to.
+The form sends messages to [Formspree](https://formspree.io) (form `xrppojby`), which emails them to michaelyeboah735@gmail.com with the visitor's email as reply-to. Submissions, spam filtering and the monthly limit (50 on the free plan) are managed in your Formspree dashboard.
 
-Two limits to know: FormSubmit refuses requests relayed through a server, and some Ghanaian networks block formsubmit.co. Visitors on those networks see "Send it from your email app instead", which opens a pre-filled email, so no message is lost. For a service that works on every network, switch to Formspree (free account at formspree.io; send the form ID).
-
-The code is the "Contact form" block in `js/script.js`; to change the receiving address, edit `RECIPIENT` there.
+If sending ever fails, the form offers the visitor a pre-filled email in their own app instead, so no message is lost. The code is the "Contact form" block in `js/script.js` (`ENDPOINT` holds the form URL).
 
 ## Live site
 
