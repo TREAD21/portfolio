@@ -237,16 +237,16 @@
     });
   });
 
-  /* ---------- Contact form (sends through /api/contact) ---------- */
-  // Posts to the site's own /api/contact function, which forwards the message to FormSubmit
-  // (some networks block formsubmit.co directly). If sending fails, the visitor is offered
-  // a pre-filled email in their own app instead.
+  /* ---------- Contact form (sends through FormSubmit) ---------- */
+  // Posts straight from the visitor's browser to FormSubmit, which emails RECIPIENT.
+  // FormSubmit refuses server-to-server requests, so there is no relay. Some networks block
+  // formsubmit.co; if sending fails, the visitor is offered a pre-filled email instead.
   const form = document.getElementById("compose-form");
   const formError = document.getElementById("compose-error");
   const formStatus = document.getElementById("compose-status");
   const submitButton = document.getElementById("compose-submit");
   const RECIPIENT = "michaelyeboah735@gmail.com";
-  const ENDPOINT = "/api/contact";
+  const ENDPOINT = "https://formsubmit.co/ajax/" + RECIPIENT;
 
   function setStatus(html, kind) {
     formStatus.innerHTML = html;
@@ -283,7 +283,13 @@
         const res = await fetch(ENDPOINT, {
           method: "POST",
           headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify({ name, email, subject, message, _honey: form.elements._honey.value }),
+          body: JSON.stringify({
+            name, email, message,
+            _subject: "Portfolio message: " + subject,
+            _replyto: email,
+            _template: "table",
+            _captcha: "false",
+          }),
         });
         const data = await res.json().catch(() => ({}));
         if (/activat/i.test(data.message || "")) {

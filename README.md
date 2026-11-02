@@ -68,11 +68,11 @@ Search `index.html` for `Placeholder`, `Sample description`, `coming-soon` and `
 
 ## Contact form
 
-The form posts to the site's own serverless function, `api/contact.js`, which forwards each message to [FormSubmit](https://formsubmit.co) (free, no account) and on to michaelyeboah735@gmail.com. Going through the site matters: some Ghanaian networks block formsubmit.co directly. The visitor's email is set as the reply-to address, so you can answer with Reply.
+The form sends messages straight from the visitor's browser to [FormSubmit](https://formsubmit.co) (free, no account, already activated), which emails them to michaelyeboah735@gmail.com with the visitor's email as reply-to.
 
-**One-time activation:** the first message sent from the live site triggers an email from FormSubmit to that inbox. Click its activation link once (check Spam/Promotions); messages sent before activation are not delivered.
+Two limits to know: FormSubmit refuses requests relayed through a server, and some Ghanaian networks block formsubmit.co. Visitors on those networks see "Send it from your email app instead", which opens a pre-filled email, so no message is lost. For a service that works on every network, switch to Formspree (free account at formspree.io; send the form ID).
 
-If sending ever fails, the form offers the visitor a pre-filled email in their own app instead. The code is the "Contact form" block in `js/script.js`; to change the receiving address, edit `RECIPIENT` in both `js/script.js` and `api/contact.js`.
+The code is the "Contact form" block in `js/script.js`; to change the receiving address, edit `RECIPIENT` there.
 
 ## Live site
 
