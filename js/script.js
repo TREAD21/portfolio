@@ -11,6 +11,24 @@
 
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ---------- Light / dark theme switch ---------- */
+  // The inline script in <head> sets data-theme before paint; this keeps the button in sync and saves the choice.
+  const themeButton = document.querySelector(".theme-toggle");
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+
+  function applyTheme(theme, save) {
+    root.setAttribute("data-theme", theme);
+    if (themeButton) themeButton.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    if (themeColor) themeColor.setAttribute("content", theme === "dark" ? "#0e0d0d" : "#101010");
+    if (save) { try { localStorage.setItem("theme", theme); } catch (e) { /* storage blocked */ } }
+  }
+  applyTheme(root.getAttribute("data-theme") === "dark" ? "dark" : "light", false);
+  if (themeButton) {
+    themeButton.addEventListener("click", () => {
+      applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark", true);
+    });
+  }
+
   /* ---------- Toast notification ---------- */
   const toast = document.getElementById("toast");
   let toastTimer;
