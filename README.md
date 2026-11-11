@@ -7,7 +7,7 @@ MY Portfolio/
 ├── index.html                      Page structure, content and SEO metadata
 ├── css/style.css                   All styling (tokens, layout, responsive, reduced motion)
 ├── js/script.js                    Menu, active nav, scroll reveal, toast, copy email, compose form
-├── projects/                       Case study pages (sika.html, st-peters.html)
+├── projects/                       Case study pages (sika.html)
 └── assets/
     ├── images/
     │   ├── favicon.svg
@@ -15,7 +15,6 @@ MY Portfolio/
     │   ├── focus-dashboard.jpg             (sample dashboard with illustrative figures; About section card)
     │   ├── profile.jpg                     (your portrait, About section and CV)
     │   ├── project-sika.jpg                (Sika launch poster; shown before the video loads)
-    │   ├── project-st-peters.jpg           (screenshot of the St. Peter's website)
     │   ├── project-finance-dashboard.jpg   (screenshot of SME Finance)
     │   ├── project-portfolio.jpg           (screenshot of this site)
     │   └── project-graphic-design.svg      (placeholder — replace with your design work)
@@ -60,7 +59,6 @@ Search `index.html` for `Placeholder`, `Sample description`, `coming-soon` and `
 | Project images | Replace files in `assets/images/` (any image around 16:10 works); update `src` if the file name changes |
 | Project text & links | Each `<!-- PROJECT n -->` block. Set `href`, delete `data-status="coming-soon"` and the `Sample description` badge |
 | Experience & education | Add more entries by copying an existing `<li class="timeline__item">` |
-| St. Peter's link | Project 2: set `href` to the live address and delete `data-status="coming-soon"` |
 | Skills | Edit chips so they list only tools you actually use |
 | CV | See "Updating your CV" above |
 | Social links | Contact section: set `href`, delete `data-status="coming-soon"`. WhatsApp: `https://wa.me/233XXXXXXXXX`. The Behance URL also goes on the Graphic Design project link |
